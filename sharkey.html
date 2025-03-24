@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharkey - Claves de Videojuegos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #001f3f, #0074D9);
+            color: white;
+            overflow-x: hidden;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 50, 0.9);
+            padding: 10px 0;
+            z-index: 1000;
+            transition: background 0.3s;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        li {
+            margin: 0 15px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            transition: color 0.3s, transform 0.3s;
+        }
+        a:hover {
+            color: #1E90FF;
+            transform: scale(1.1);
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            gap: 20px;
+        }
+        .link-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 1.2em;
+            width: 300px;
+            text-align: center;
+            transition: background 0.3s, transform 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .link-box img {
+            width: 40px;
+            height: 40px;
+        }
+        .status {
+            width: 20px;
+            height: 20px;
+            background: red;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .linked {
+            background: green !important;
+        }
+        .link-box:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        .small-box {
+            width: 200px;
+            font-size: 1em;
+        }
+    </style>
+    <script>
+        function toggleStatus(element) {
+            element.classList.toggle('linked');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Sharkey</div>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="sharkey3.html">Nosotros</a></li>
+                <li><a href="sharkey2.html" class="login-btn">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="container">
+        <div class="link-box">
+            <img src="steam.jpg" alt="Steam">
+            Vincula tu cuenta Sharkey con Steam
+            <div class="status" onclick="toggleStatus(this)"></div>
+        </div>
+        <div class="link-box">
+            <img src="epic games.png" alt="Epic Games">
+            Vincula tu cuenta Sharkey con Epic Games
+            <div class="status" onclick="toggleStatus(this)"></div>
+        </div>
+        <div class="link-box">
+            <img src="origin.jpg" alt="Origin">
+            Vincula tu cuenta Sharkey con Origin
+            <div class="status" onclick="toggleStatus(this)"></div>
+        </div>
+        <div class="link-box small-box">
+            Vincular con otra plataforma
+        </div>
+    </section>
+</body>
+</html>
